@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		603FD5072BE47AD70038F5CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603FD5062BE47AD70038F5CF /* AppDelegate.swift */; };
 		603FD5092BE47AD70038F5CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603FD5082BE47AD70038F5CF /* SceneDelegate.swift */; };
-		603FD50B2BE47AD70038F5CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603FD50A2BE47AD70038F5CF /* ViewController.swift */; };
+		603FD50B2BE47AD70038F5CF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603FD50A2BE47AD70038F5CF /* HomeViewController.swift */; };
 		603FD50E2BE47AD70038F5CF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 603FD50D2BE47AD70038F5CF /* Base */; };
 		603FD5102BE47AD90038F5CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 603FD50F2BE47AD90038F5CF /* Assets.xcassets */; };
 		603FD5132BE47AD90038F5CF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 603FD5122BE47AD90038F5CF /* Base */; };
+		603FD51B2BE47AFB0038F5CF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603FD51A2BE47AFA0038F5CF /* DetailViewController.swift */; };
+		603FD51F2BE47C6A0038F5CF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 603FD51E2BE47C6A0038F5CF /* Alamofire */; };
+		603FD5212BE47C6A0038F5CF /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 603FD5202BE47C6A0038F5CF /* AlamofireDynamic */; };
+		603FD5242BE47C7D0038F5CF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 603FD5232BE47C7D0038F5CF /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		603FD5032BE47AD70038F5CF /* Gonna Be Rich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gonna Be Rich.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		603FD5062BE47AD70038F5CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		603FD5082BE47AD70038F5CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		603FD50A2BE47AD70038F5CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		603FD50A2BE47AD70038F5CF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		603FD50D2BE47AD70038F5CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		603FD50F2BE47AD90038F5CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		603FD5122BE47AD90038F5CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		603FD5142BE47AD90038F5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		603FD51A2BE47AFA0038F5CF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				603FD5242BE47C7D0038F5CF /* Kingfisher in Frameworks */,
+				603FD51F2BE47C6A0038F5CF /* Alamofire in Frameworks */,
+				603FD5212BE47C6A0038F5CF /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +66,22 @@
 			children = (
 				603FD5062BE47AD70038F5CF /* AppDelegate.swift */,
 				603FD5082BE47AD70038F5CF /* SceneDelegate.swift */,
-				603FD50A2BE47AD70038F5CF /* ViewController.swift */,
+				603FD51C2BE47B010038F5CF /* Controllers */,
 				603FD50C2BE47AD70038F5CF /* Main.storyboard */,
 				603FD50F2BE47AD90038F5CF /* Assets.xcassets */,
 				603FD5112BE47AD90038F5CF /* LaunchScreen.storyboard */,
 				603FD5142BE47AD90038F5CF /* Info.plist */,
 			);
 			path = "Gonna Be Rich";
+			sourceTree = "<group>";
+		};
+		603FD51C2BE47B010038F5CF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				603FD50A2BE47AD70038F5CF /* HomeViewController.swift */,
+				603FD51A2BE47AFA0038F5CF /* DetailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +100,11 @@
 			dependencies = (
 			);
 			name = "Gonna Be Rich";
+			packageProductDependencies = (
+				603FD51E2BE47C6A0038F5CF /* Alamofire */,
+				603FD5202BE47C6A0038F5CF /* AlamofireDynamic */,
+				603FD5232BE47C7D0038F5CF /* Kingfisher */,
+			);
 			productName = "Gonna Be Rich";
 			productReference = 603FD5032BE47AD70038F5CF /* Gonna Be Rich.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,10 @@
 				Base,
 			);
 			mainGroup = 603FD4FA2BE47AD70038F5CF;
+			packageReferences = (
+				603FD51D2BE47C6A0038F5CF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				603FD5222BE47C7D0038F5CF /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 603FD5042BE47AD70038F5CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				603FD50B2BE47AD70038F5CF /* ViewController.swift in Sources */,
+				603FD50B2BE47AD70038F5CF /* HomeViewController.swift in Sources */,
 				603FD5072BE47AD70038F5CF /* AppDelegate.swift in Sources */,
 				603FD5092BE47AD70038F5CF /* SceneDelegate.swift in Sources */,
+				603FD51B2BE47AFB0038F5CF /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +390,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		603FD51D2BE47C6A0038F5CF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		603FD5222BE47C7D0038F5CF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		603FD51E2BE47C6A0038F5CF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 603FD51D2BE47C6A0038F5CF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		603FD5202BE47C6A0038F5CF /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 603FD51D2BE47C6A0038F5CF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		603FD5232BE47C7D0038F5CF /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 603FD5222BE47C7D0038F5CF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 603FD4FB2BE47AD70038F5CF /* Project object */;
 }
