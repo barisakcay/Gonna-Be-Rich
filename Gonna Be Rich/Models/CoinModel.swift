@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct CoinModel: Decodable {
+struct CoinModel: Codable {
     let data: CoinData
 }
 
-struct CoinData: Decodable {
+struct CoinData: Codable {
     let coins: [Coins]
 }
 
-struct Coins: Decodable {
+struct Coins: Codable {
     
     let symbol: String?
     let name: String?

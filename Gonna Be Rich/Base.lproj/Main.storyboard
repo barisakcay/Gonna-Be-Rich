@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SbT-nU-q14">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="171" width="393" height="647"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCell" id="Q2n-Sp-IHr">
@@ -34,14 +34,63 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="mmM-5v-Rzy"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="an6-oi-0e6">
+                                <rect key="frame" x="16" y="103" width="361" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Nww-uu-h9q">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8U-Fp-pE8">
+                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="60"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7c-mY-4cQ">
+                                                <rect key="frame" x="185.66666666666663" y="0.0" width="175.33333333333337" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QJ-XE-QEf">
+                                                        <rect key="frame" x="39.999999999999993" y="12" width="119.33333333333331" height="36"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="24h Vol ▼">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="sortButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Eh-Nh-V3A"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="4QJ-XE-QEf" firstAttribute="leading" relation="lessThanOrEqual" secondItem="D7c-mY-4cQ" secondAttribute="leading" constant="40" id="Bxv-3E-vSM"/>
+                                                    <constraint firstItem="4QJ-XE-QEf" firstAttribute="top" secondItem="D7c-mY-4cQ" secondAttribute="top" constant="12" id="SXH-1f-FFY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4QJ-XE-QEf" secondAttribute="bottom" constant="12" id="WZ1-6Z-Fbe"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4QJ-XE-QEf" secondAttribute="trailing" constant="16" id="zaa-ML-GTL"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Nww-uu-h9q" secondAttribute="trailing" id="b4f-S9-QvU"/>
+                                    <constraint firstItem="Nww-uu-h9q" firstAttribute="leading" secondItem="an6-oi-0e6" secondAttribute="leading" id="mB4-jM-tOi"/>
+                                    <constraint firstItem="Nww-uu-h9q" firstAttribute="top" secondItem="an6-oi-0e6" secondAttribute="top" id="npG-vR-gg4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nww-uu-h9q" secondAttribute="bottom" id="oof-Q8-ssn"/>
+                                    <constraint firstAttribute="height" constant="60" id="ujP-uy-L2r"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SbT-nU-q14" secondAttribute="bottom" id="3DB-YL-Gfb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SbT-nU-q14" secondAttribute="trailing" id="tNB-Ny-GCu"/>
-                            <constraint firstItem="SbT-nU-q14" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uOH-dD-iOc"/>
-                            <constraint firstItem="SbT-nU-q14" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xE5-jx-Bcf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="an6-oi-0e6" secondAttribute="trailing" constant="16" id="2pA-dl-hGe"/>
+                            <constraint firstItem="SbT-nU-q14" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KDI-9h-qaQ"/>
+                            <constraint firstItem="SbT-nU-q14" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kbG-Sl-smL"/>
+                            <constraint firstItem="an6-oi-0e6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ksP-s7-qX5"/>
+                            <constraint firstItem="an6-oi-0e6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nZr-or-mKf"/>
+                            <constraint firstItem="SbT-nU-q14" firstAttribute="top" secondItem="an6-oi-0e6" secondAttribute="bottom" constant="8" id="ohN-mb-Crf"/>
+                            <constraint firstItem="SbT-nU-q14" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sMf-IP-C6P"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zql-3a-wly"/>
