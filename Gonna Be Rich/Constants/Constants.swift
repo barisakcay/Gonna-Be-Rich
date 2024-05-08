@@ -10,4 +10,5 @@ import Foundation
 struct Constants {
     static let url: String = "https://psp-merchantpanel-service-sandbox.ozanodeme.com.tr/api/v1/dummy/coins"
     static let homeCellIdentifier: String = "HomeTableViewCell"
+    static let sortCellIdentifier: String = "SortCell"
 }
