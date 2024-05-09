@@ -32,6 +32,7 @@ class HomeViewController: UIViewController {
         coinManager.performRequest(with: Constants.url)
         sortTypeButton.tintColor = .orange.withAlphaComponent(0.9)
         sortTypeButton.setTitleColor(.black, for: .normal)
+        tableView.estimatedRowHeight = 88
     }
     
     @IBAction func sortButtonTapped(_ sender: UIButton) {

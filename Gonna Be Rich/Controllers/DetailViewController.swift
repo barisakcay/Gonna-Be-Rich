@@ -37,8 +37,8 @@ class DetailViewController: UIViewController {
         coinImage.kf.setImage(with: iconUrl)
         let floatPrice = Float(detailedCoin.price)
         priceLabel.text = "$\(String(format: "%.3f", floatPrice!))"
-        dailyMaxLabel.text = "Highest Price:\n\(String(format: "%.3f", Float(detailedCoin.sparkline.max()!)!))"
-        dailyMinLabel.text = "Lowest Price:\n\(String(format: "%.3f", Float(detailedCoin.sparkline.min()!)!))"
+        dailyMaxLabel.text = "Highest Price:\n$ \(String(format: "%.3f", Float(detailedCoin.sparkline.max()!)!))"
+        dailyMinLabel.text = "Lowest Price:\n$ \(String(format: "%.3f", Float(detailedCoin.sparkline.min()!)!))"
         let startingprice = Float(detailedCoin.sparkline.first!)!
         let lastprice = Float(detailedCoin.sparkline.last!)!
         let calculatedDailyChange = String(format: "%.3f", startingprice - lastprice)
@@ -46,9 +46,9 @@ class DetailViewController: UIViewController {
         if detailedCoin.change.first == "-" {
             changeLabel.textColor = .red.withAlphaComponent(0.7)
         }else {
-            changeLabel.textColor = .green.withAlphaComponent(0.7)
+            changeLabel.textColor = .systemGreen.withAlphaComponent(0.7)
         }
-        volumeLabel.text = "Volume:\n\(detailedCoin.volume)"
+        volumeLabel.text = "24h Volume:\n\(detailedCoin.volume)"
         navigationItem.title = detailedCoin.symbol
     }
 }
@@ -69,7 +69,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 13, height: 300)
+            return CGSize(width: 13, height: 240)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

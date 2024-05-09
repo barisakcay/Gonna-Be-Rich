@@ -25,6 +25,7 @@ class HomeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
+    
     override func layoutSubviews() {
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
         contentView.layer.cornerRadius = 2
@@ -47,9 +48,9 @@ class HomeTableViewCell: UITableViewCell {
         let calculatedDailyChange = String(format: "%.3f", startingprice - lastprice)
         dailyChangeLabel.text = "\(model.change)% ($\(calculatedDailyChange))"
         if model.change.first == "-" {
-            dailyChangeLabel.textColor = .red.withAlphaComponent(0.7)
+            dailyChangeLabel.textColor = .systemRed
         }else {
-            dailyChangeLabel.textColor = .green.withAlphaComponent(0.7)
+            dailyChangeLabel.textColor = .systemGreen
         }
         backView.layer.cornerRadius = 16
         backView.backgroundColor = .black.withAlphaComponent(0.06)
