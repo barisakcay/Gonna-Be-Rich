@@ -9,12 +9,10 @@ import UIKit
 import Kingfisher
 
 class DetailViewController: UIViewController {
+    
+    var coinTransfer = [safeCoins]()
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var textOne = "▬"
-    var textTwo = "▮"
-    var coinTransfer = [safeCoins]()    
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var changeLabel: UILabel!

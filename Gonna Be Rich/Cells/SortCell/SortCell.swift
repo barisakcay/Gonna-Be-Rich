@@ -13,13 +13,10 @@ class SortCell: UITableViewCell {
     @IBOutlet weak var sortTypeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     override func layoutSubviews() {
@@ -35,9 +32,9 @@ class SortCell: UITableViewCell {
         backView.clipsToBounds = true
         if sortType.last == "▲" {
             backView.backgroundColor = .orange.withAlphaComponent(0.3)
-        }else {
+        }
+        else {
             backView.backgroundColor = .orange.withAlphaComponent(0.7)
         }
     }
-    
 }

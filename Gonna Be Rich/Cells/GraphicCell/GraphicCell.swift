@@ -17,12 +17,9 @@ class GraphicCell: UICollectionViewCell {
     func configure(value: String, max: String, min: String) {
         barView.backgroundColor = .orange
         let graphViewHeight = (300 * (Float(max)! - Float(value)!)) / (Float(max)! - Float(min)!)
-        print(graphViewHeight)
-        print(Int(graphViewHeight))
         let frame = CGRect(x: 0, y: 0, width: 13, height: Int(graphViewHeight))
         let graphView = UIView(frame: frame)
         graphView.backgroundColor = .systemBackground
         barView.addSubview(graphView)
-        print(value,max,min)
     }
 }
