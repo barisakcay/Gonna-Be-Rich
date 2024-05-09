@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
     @IBAction func sortButtonTapped(_ sender: UIButton) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sortVC = storyboard.instantiateViewController(withIdentifier: "SortViewController") as! SortViewController
+        let sortVC = storyboard.instantiateViewController(withIdentifier: Constants.sortViewControllerIdentifier) as! SortViewController
         if let presentationController = sortVC.presentationController as? UISheetPresentationController {
             presentationController.detents = [.medium()]
         }
@@ -48,7 +48,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        coinsArr.count - 1
+        coinsArr.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.homeCellIdentifier, for: indexPath) as? HomeTableViewCell else {return UITableViewCell()}
@@ -57,6 +57,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         88
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: Constants.detailViewControllerIdentifier) as! DetailViewController
+        detailVC.coinTransfer = [coinsArr[indexPath.row]]
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
@@ -81,6 +86,7 @@ extension HomeViewController: CoinManagerDelegate {
 extension HomeViewController: SortTypeDelegate {
     func sendType(_ text: String) {
         sortTypeButton.setTitle(text, for: .normal)
+        sortTypeButton.titleLabel?.font = UIFont(name: "System Bold", size: 16)
         
         switch text {
         case "Price ▼":

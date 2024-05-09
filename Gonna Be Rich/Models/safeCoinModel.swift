@@ -19,3 +19,4 @@ struct safeCoins: Codable {
     let sparkline: [String]
     let volume: String
 }
+

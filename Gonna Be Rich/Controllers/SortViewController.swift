@@ -22,10 +22,10 @@ class SortViewController: UIViewController {
         let nib = UINib(nibName: Constants.sortCellIdentifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: Constants.sortCellIdentifier)
     }
-
 }
 
 extension SortViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         sortingTypes.count
     }
@@ -42,5 +42,4 @@ extension SortViewController: UITableViewDelegate, UITableViewDataSource {
         delegate?.sendType(sortingTypes[indexPath.row])
         dismiss(animated: true)
     }
-    
 }

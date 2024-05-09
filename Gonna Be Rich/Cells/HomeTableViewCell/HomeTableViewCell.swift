@@ -47,9 +47,9 @@ class HomeTableViewCell: UITableViewCell {
         let calculatedDailyChange = String(format: "%.3f", startingprice - lastprice)
         dailyChangeLabel.text = "\(model.change)% ($\(calculatedDailyChange))"
         if model.change.first == "-" {
-            dailyChangeLabel.textColor = .red
+            dailyChangeLabel.textColor = .red.withAlphaComponent(0.7)
         }else {
-            dailyChangeLabel.textColor = .green
+            dailyChangeLabel.textColor = .green.withAlphaComponent(0.7)
         }
         backView.layer.cornerRadius = 16
         backView.backgroundColor = .black.withAlphaComponent(0.06)
