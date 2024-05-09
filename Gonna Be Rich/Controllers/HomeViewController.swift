@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        navigationItem.title = "Gonna Be Rich"
         let nib = UINib(nibName: Constants.homeCellIdentifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: Constants.homeCellIdentifier)
         coinManager.delegate = self

@@ -164,7 +164,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7vB-Al-vu4">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7vB-Al-vu4">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTS-Lc-097">
@@ -260,11 +260,30 @@
                                             <constraint firstAttribute="trailing" secondItem="oKv-eQ-da5" secondAttribute="trailing" constant="24" id="k7t-Q3-x2v"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wg3-GO-cWW">
+                                        <rect key="frame" x="0.0" y="304" width="393" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24h Change Graphic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDx-JU-g5V">
+                                                <rect key="frame" x="16" y="0.0" width="361" height="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="LDx-JU-g5V" secondAttribute="bottom" id="9Ms-DZ-quq"/>
+                                            <constraint firstItem="LDx-JU-g5V" firstAttribute="top" secondItem="wg3-GO-cWW" secondAttribute="top" id="BBe-D0-Oii"/>
+                                            <constraint firstAttribute="trailing" secondItem="LDx-JU-g5V" secondAttribute="trailing" constant="16" id="L8b-Sw-ZRs"/>
+                                            <constraint firstAttribute="height" constant="20" id="M5z-0V-woB"/>
+                                            <constraint firstItem="LDx-JU-g5V" firstAttribute="leading" secondItem="wg3-GO-cWW" secondAttribute="leading" constant="16" id="dS2-gt-VXH"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaO-D9-Hr6">
-                                        <rect key="frame" x="0.0" y="308" width="393" height="407"/>
+                                        <rect key="frame" x="0.0" y="328" width="393" height="387"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qAl-4e-67r">
-                                                <rect key="frame" x="16" y="16" width="361" height="375"/>
+                                                <rect key="frame" x="16" y="16" width="361" height="355"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GSO-eL-H4Y">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -292,9 +311,11 @@
                                     <constraint firstItem="eaO-D9-Hr6" firstAttribute="leading" secondItem="7vB-Al-vu4" secondAttribute="leading" id="Jn6-gL-cQk"/>
                                     <constraint firstAttribute="trailing" secondItem="eaO-D9-Hr6" secondAttribute="trailing" id="MTh-Ay-C1d"/>
                                     <constraint firstAttribute="bottom" secondItem="eaO-D9-Hr6" secondAttribute="bottom" id="V84-td-2HN"/>
+                                    <constraint firstAttribute="trailing" secondItem="wg3-GO-cWW" secondAttribute="trailing" id="mt1-sN-EQl"/>
                                     <constraint firstItem="cTS-Lc-097" firstAttribute="top" secondItem="7vB-Al-vu4" secondAttribute="top" id="sbq-8W-YMg"/>
                                     <constraint firstAttribute="trailing" secondItem="cTS-Lc-097" secondAttribute="trailing" id="thJ-00-Xfu"/>
                                     <constraint firstItem="cTS-Lc-097" firstAttribute="leading" secondItem="7vB-Al-vu4" secondAttribute="leading" id="vE5-2L-V09"/>
+                                    <constraint firstItem="wg3-GO-cWW" firstAttribute="leading" secondItem="7vB-Al-vu4" secondAttribute="leading" id="ynh-Qd-i2U"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -331,6 +352,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OM1-10-bAp">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.88535314798355103" green="0.46186298131942749" blue="0.057715147733688354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
