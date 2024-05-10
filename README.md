@@ -1,7 +1,7 @@
 # Table of Contents
 1. [Description](#description)
 2. [Getting started](#getting-started)
-3. [Architecture](#arhitecture)
+3. [Architecture](#architecture)
 4. [Design](#design)
 5. [API](#api)
 6. [Packages](#packages)
